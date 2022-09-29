@@ -6,6 +6,7 @@ using System.Numerics;
 namespace Persistencia.FluentConfig.Administrador
 {
     public class ActividadConfig
+
     {
         public ActividadConfig(EntityTypeBuilder<Actividad> entity)
         {
