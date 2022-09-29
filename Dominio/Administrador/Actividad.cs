@@ -1,12 +1,10 @@
-﻿using System.Numerics;
-
-namespace Dominio.Administrador
+﻿namespace Dominio.Administrador
 {
     public class Actividad
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
         
-        public BigInteger ModuloId { get; set; }
+        public Guid ModuloId { get; set; }
 
         public String? VcNombre { get; set; }
 

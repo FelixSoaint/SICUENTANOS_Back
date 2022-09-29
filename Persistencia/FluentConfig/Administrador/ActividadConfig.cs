@@ -63,97 +63,97 @@ namespace Persistencia.FluentConfig.Administrador
 
 
 
-            entity.HasData(
-                new Actividad
-                {
-                    Id = 1,
-                    ModuloId = 1,
-                    VcNombre = "Personas",
-                    VcDescripcion = "Gestión de personas",
-                    VcRedireccion = "#",
-                    VcIcono = "bi bi-person",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
-                },
-                new Actividad
-                {
-                    Id = 2,
-                    ModuloId = 1,
-                    VcNombre = "Roles",
-                    VcDescripcion = "Gestión de roles",
-                    VcRedireccion = "/actividad",
-                    VcIcono = "bi bi-person-rolodex",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
-                },
-                new Actividad
-                {
-                    Id = 3,
-                    ModuloId = 1,
-                    VcNombre = "Configuración",
-                    VcDescripcion = "Configuración General",
-                    VcRedireccion = "#",
-                    VcIcono = "bi bi-person-rolodex",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
-                },
-                new Actividad
-                {
-                    Id = 4,
-                    ModuloId = 1,
-                    VcNombre = "Uusarios",
-                    VcDescripcion = "Gestión de usuarios",
-                    VcRedireccion = "/usuario",
-                    VcIcono = "",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
+            //entity.HasData(
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("b235b97e-e79a-481a-ad19-cb314e5e8ea7"),
+            //        ModuloId = 1,
+            //        VcNombre = "Personas",
+            //        VcDescripcion = "Gestión de personas",
+            //        VcRedireccion = "#",
+            //        VcIcono = "bi bi-person",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("9f8333eb-c849-4db5-9147-7fee695d507c"),
+            //        ModuloId = 1,
+            //        VcNombre = "Roles",
+            //        VcDescripcion = "Gestión de roles",
+            //        VcRedireccion = "/actividad",
+            //        VcIcono = "bi bi-person-rolodex",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("651fb52a-eff0-4ba8-8639-8eb415cd177f"),
+            //        ModuloId = 1,
+            //        VcNombre = "Configuración",
+            //        VcDescripcion = "Configuración General",
+            //        VcRedireccion = "#",
+            //        VcIcono = "bi bi-person-rolodex",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("f1de5c86-a834-44e6-96fd-d5f7eb2c1565"),
+            //        ModuloId = 1,
+            //        VcNombre = "Uusarios",
+            //        VcDescripcion = "Gestión de usuarios",
+            //        VcRedireccion = "/usuario",
+            //        VcIcono = "",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
 
-                },
-                new Actividad
-                {
-                    Id = 5,
-                    ModuloId = 1,
-                    VcNombre = "Cargos",
-                    VcDescripcion = "Gestión de Cargos",
-                    VcRedireccion = "/cargos",
-                    VcIcono = "",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
-                },
-                new Actividad
-                {
-                    Id = 6,
-                    ModuloId = 1,
-                    VcNombre = "Áreas",
-                    VcDescripcion = "Gestión de Áreas",
-                    VcRedireccion = "#",
-                    VcIcono = "",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
-                },
-                new Actividad
-                {
-                    Id = 7,
-                    ModuloId = 1,
-                    VcNombre = "Puntos de Atención",
-                    VcDescripcion = "Gestión de Puntos de Atención",
-                    VcRedireccion = "#",
-                    VcIcono = "bi bi-person",
-                    BEstado = true,
-                    DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
-                }
-            );
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("136e80b6-663e-42d3-bc36-b63463f4ed88"),
+            //        ModuloId = 1,
+            //        VcNombre = "Cargos",
+            //        VcDescripcion = "Gestión de Cargos",
+            //        VcRedireccion = "/cargos",
+            //        VcIcono = "",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("7102d0db-d846-488e-b485-a6518aeb722d"),
+            //        ModuloId = 1,
+            //        VcNombre = "Áreas",
+            //        VcDescripcion = "Gestión de Áreas",
+            //        VcRedireccion = "#",
+            //        VcIcono = "",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
+            //    },
+            //    new Actividad
+            //    {
+            //        Id = Guid.Parse("efaf2845-3c4e-44b1-9385-29781eb7247d"),
+            //        ModuloId = 1,
+            //        VcNombre = "Puntos de Atención",
+            //        VcDescripcion = "Gestión de Puntos de Atención",
+            //        VcRedireccion = "#",
+            //        VcIcono = "bi bi-person",
+            //        BEstado = true,
+            //        DtFechaCreacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion = new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        PadreId = "b235b97e-e79a-481a-ad19-cb314e5e8ea7"
+            //    }
+            //);
 
         }
     }

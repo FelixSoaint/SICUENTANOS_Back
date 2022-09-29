@@ -4,9 +4,9 @@ namespace Dominio.Administrador
 {
     public class Rol
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
 
-        public BigInteger ModuloId { get; set; }
+        public Guid ModuloId { get; set; }
 
         public String? VcNombre { get; set; }
 

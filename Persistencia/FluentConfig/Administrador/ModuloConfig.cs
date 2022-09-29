@@ -10,10 +10,14 @@ namespace Persistencia.FluentConfig.Administrador
         {
             entity.ToTable("Modulo");
             entity.HasKey(p => p.Id);
-            entity.HasMany(p=> p.Actividades).WithOne();
-            entity.HasMany(p => p.Roles).WithOne();
 
+            entity.HasMany(p=> p.Actividades)
+                  .WithOne(p=>p.Modulo);
 
+            entity.HasMany(p => p.Roles)
+                  .WithOne(p=>p.Modulo);
+
+        
             entity.Property(p=> p.VcNombre).IsRequired().HasMaxLength(50);
 
             entity.Property(p=> p.VcDescripcion).IsRequired().HasMaxLength(200);
@@ -35,38 +39,38 @@ namespace Persistencia.FluentConfig.Administrador
 
 
 
-             entity.HasData(
-                new Modulo
-                {
-                    Id= 1,
-                    VcNombre= "Administrador",
-                    VcDescripcion= "Modulo para gestionar los permisos de los usuarios dentro del aplicativo",
-                    VcIcono= "bi bi-sliders",
-                    BEstado= true,
-                    DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)                    
-                },
-                new Modulo
-                {
-                    Id= 2,
-                    VcNombre= "Orientación e Información",
-                    VcDescripcion= "Modulo para registrar la gestión de orientación e información de la Dirección de Servicio a la Ciudadanía DSC",
-                    VcIcono="bi bi-info-circle-fill",
-                    BEstado= true,
-                    DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)  
-                },
-                new Modulo
-                {
-                    Id= 3,
-                    VcNombre= "Asistencia Técnica",
-                    VcDescripcion= "Modulo para realizar seguimiento a las actividades que cumple el equipo de asistencia técnica tales como planes de acción",
-                    VcIcono= "bi bi-search-heart",
-                    BEstado= true,
-                    DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
-                    DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
-                }                                
-            );
+            // entity.HasData(
+            //    new Modulo
+            //    {
+            //        Id= 1,
+            //        VcNombre= "Administrador",
+            //        VcDescripcion= "Modulo para gestionar los permisos de los usuarios dentro del aplicativo",
+            //        VcIcono= "bi bi-sliders",
+            //        BEstado= true,
+            //        DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)                    
+            //    },
+            //    new Modulo
+            //    {
+            //        Id= 2,
+            //        VcNombre= "Orientación e Información",
+            //        VcDescripcion= "Modulo para registrar la gestión de orientación e información de la Dirección de Servicio a la Ciudadanía DSC",
+            //        VcIcono="bi bi-info-circle-fill",
+            //        BEstado= true,
+            //        DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)  
+            //    },
+            //    new Modulo
+            //    {
+            //        Id= 3,
+            //        VcNombre= "Asistencia Técnica",
+            //        VcDescripcion= "Modulo para realizar seguimiento a las actividades que cumple el equipo de asistencia técnica tales como planes de acción",
+            //        VcIcono= "bi bi-search-heart",
+            //        BEstado= true,
+            //        DtFechaCreacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773),
+            //        DtFechaActualizacion= new DateTime(2022, 8, 13, 11, 15, 9, 749, DateTimeKind.Local).AddTicks(9773)
+            //    }                                
+            //);
         }
     }
 }

@@ -1,10 +1,8 @@
-﻿using System.Numerics;
-
-namespace Dominio.Administrador
+﻿namespace Dominio.Administrador
 {
     public class Configuracion
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
 
         public int? IDiasLimiteRespuesta { get; set; }
 

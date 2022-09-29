@@ -4,7 +4,7 @@ namespace Dominio.Administrador
 {
     public class Usuario
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
 
         public String? TipoDocumento { get; set; }
 

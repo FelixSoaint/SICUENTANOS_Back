@@ -1,12 +1,10 @@
-﻿using System.Numerics;
-
-namespace Dominio.Administrador
+﻿namespace Dominio.Administrador
 {
     public class Contrato
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
 
-        public BigInteger UsuarioId { get; set; }
+        public Guid UsuarioId { get; set; }
 
         public int INumero { get; set; }
 

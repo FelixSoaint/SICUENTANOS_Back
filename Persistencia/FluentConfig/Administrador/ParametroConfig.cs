@@ -11,13 +11,6 @@ namespace Persistencia.FluentConfig.Administrador
             entity.ToTable("Parametro");
             entity.HasKey(p=> p.Id);
 
-            entity
-           .HasMany(p => p.ParametroDetalles)
-           .WithOne(p => p.Parametro)
-           .HasForeignKey(p => p.Id)
-           .HasConstraintName("FK_Parametro_ParametroDetalle")
-           .OnDelete(DeleteBehavior.Restrict);
-
             entity.Property(p=> p.VcNombre).IsRequired().HasMaxLength(50);
 
             entity.Property(p=> p.VcCodigoInterno).IsRequired().HasMaxLength(20);

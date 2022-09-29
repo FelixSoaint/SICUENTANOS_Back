@@ -4,9 +4,9 @@ namespace Dominio.Administrador
 {
     public class ParametroDetalle
     {
-        public BigInteger Id { get; set; }
+        public Guid Id { get; set; }
 
-        public BigInteger ParametroId { get; set; }
+        public Guid ParametroId { get; set; }
         public Parametro? Parametro { get; set; }
 
         public String? VcNombre { get; set; }

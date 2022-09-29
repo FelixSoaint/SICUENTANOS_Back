@@ -9,8 +9,10 @@ namespace Persistencia.FluentConfig.Administrador
         public ParametroDetalleConfig(EntityTypeBuilder<ParametroDetalle> entity)
         {
             entity.ToTable("ParametroDetalle");
-            entity.HasKey(p=> p.Id); 
-            entity.HasOne(p => p.Parametro).WithOne();
+            entity.HasKey(p=> p.Id);
+
+            entity.HasOne(p => p.Parametro)
+                  .WithMany(p => p.ParametroDetalles);
 
             entity
             .HasMany(p => p.CargosUsuario)
